@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import './styles/mole-game.css';
+@import './styles/break-game.css';
+@import './styles/space-invader.css';
+@import './styles/palette.css';
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Diseño del navegador */
+.nav-games {
+    background: var(--nav);
+    width: max-content;
+    padding: 0.5rem 2.5rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 0.8rem;
+    justify-content: baseline;
+    z-index: 10;
+    border-radius: 3rem;
+    backdrop-filter: blur(4px);
+}
+.nav-games a {
+    background: transparent;
+    padding: 0.8rem;
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--gris);
+    border-radius: 40%;
+    z-index: 8;
+}
+.nav-games a:hover {
+    color: var(--verde);
+    background: rgba(0, 0, 0, 0.2);
+}
+.nav-games a.active {
+    color: var(--verde);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+img {
+    cursor: pointer;
+}
+#grid-memory, .grid-mole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    border-radius: 3px;
+    border: 10px solid var(--gris);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    color: white;
+    background: rgb(235,116,207);
+background: linear-gradient(0deg, rgba(235,116,207,1) 0%, rgba(218,35,176,1) 100%);
+    height: 100vh;
+}
+
+.footer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--nav);
+    font-size: 1rem;
+    color: white;
+    border-bottom: 1px solid --verde-cielo;
+    padding: 1.2rem 1.2rem;
+    z-index: 20;
+}

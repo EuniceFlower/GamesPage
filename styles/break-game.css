@@ -1,0 +1,68 @@
+@import './palette.css';
+
+.grid-break {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 67%;
+    border: 1px solid var(--gris);
+}
+
+.block {
+    width: 22%;
+    height: 8%;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.blockGamer {
+    width: 30%;
+    height: 7%;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+.ballGame {
+    /* width: 10%;
+    height: 5.5%; */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid rgb(173, 173, 173);
+    border-left: 3px solid rgb(222, 222, 222);
+    animation: spin 5s linear infinite;
+    background-color: rgba(18, 18, 18, 0.719);
+    z-index: 9;
+}
+.textScore {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid-break {
+        max-width: 55%;
+    }
+    .block {
+        width: 23%;
+    }
+    /* .ballGame {
+        width: 4%;
+        height: 8%;
+    } */
+}

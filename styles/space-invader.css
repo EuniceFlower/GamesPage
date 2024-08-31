@@ -1,0 +1,24 @@
+@import './palette.css';
+
+.grid-space {
+    width: 80%;
+    height: 60%;
+    border: 1px solid var(--gris);
+}
+.squareCover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.squares {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+@media screen { 
+      
+}
